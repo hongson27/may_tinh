@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+border: 2px solid black;
+}
+.nutBam {
+width: 100%;
+
+}
+</style>
+</head>
+<body>
+<table>
+<tr>
+<td colspan="4"><input id="screen" type="text" value=""></td>
+</tr>
+<tr>
+<td><input type="button" class="nutBam" value="1" onclick="setValue(1)"></td>
+<td><input type="button" class="nutBam" value="2" onclick="setValue(2)"></td>
+<td><input type="button" class="nutBam" value="3" onclick="setValue(3)"></td>
+<td><input type="button" class="nutBam" value="+" onclick="setValue('+')"></td>
+</tr>
+<tr>
+<td><input type="button" class="nutBam" value="4" onclick="setValue(4)"></td>
+<td><input type="button" class="nutBam" value="5" onclick="setValue(5)"></td>
+<td><input type="button" class="nutBam" value="6" onclick="setValue(6)"></td>
+<td><input type="button" class="nutBam" value="-" onclick="setValue('-')"></td>
+</tr>
+<tr>
+<td><input type="button" class="nutBam" value="7" onclick="setValue(7)"></td>
+<td><input type="button" class="nutBam" value="8" onclick="setValue(8)"></td>
+<td><input type="button" class="nutBam" value="9" onclick="setValue(9)"></td>
+<td><input type="button" class="nutBam" value="x" onclick="setValue('*')"></td>
+</tr>
+<tr>
+<td><input type="button" class="nutBam" value="C" onclick="reset()"></td>
+<td><input type="button" class="nutBam" value="0" onclick="setValue(0)"></td>
+<td><input type="button" class="nutBam" value="=" onclick="result()"></td>
+<td><input type="button" class="nutBam" value="/" onclick="setValue('/')"></td>
+</tr>
+
+</table>
+
+<script>
+function setValue(number) {
+let screen = document.getElementById('screen');
+screen.value += number;
+}
+function result() {
+ let screen = document.getElementById('screen');
+    let input = screen.value;
+    let res = eval(input);
+    screen.value = res;
+}
+function reset() {
+let screen = document.getElementById('screen');
+screen.value =null;
+}
+</script>
+
+</body>
+</html>
